@@ -1,0 +1,342 @@
+/* Resetando estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+/* Estilo global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6c63ff, #3a3a3a);
+    color: #333;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Estilo dos campos do formulário */
+form label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+form input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.6);
+}
+
+/* Botão de envio */
+form button {
+    padding: 12px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 220px;
+}
+
+form button:hover {
+    background-color: #5b54e1;
+    transform: translateY(-2px);
+}
+
+/* Container para links gerados */
+#linkContainer {
+    display: none; /* Inicialmente oculto */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Título explicativo */
+#linkContainer h3 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Parágrafo explicativo */
+#linkContainer p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Estilo para os links */
+#linkContainer a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#linkContainer a:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Ajuste para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form button {
+        max-width: 100%;
+    }
+
+    #linkContainer a {
+        max-width: 100%;
+    }
+}
+
+/* Mensagens de erro */
+.alert {
+    color: red;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Detalhes do Link */
+.link-details,
+.table-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.link-details p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.link-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link-details a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a tabela de acessos */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+}
+
+th, td {
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    word-wrap: break-word;
+    max-width: 200px;
+}
+
+.table-header {
+    position: relative; /* Permite posicionamento absoluto do ícone */
+    text-align: left; /* Alinha o texto à esquerda */
+    background-color: #f4f4f4; /* Fundo claro */
+    border-bottom: 1px solid #ddd; /* Linha de separação */
+    padding: 10px;
+}
+
+.table-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.table-header .export-btn {
+    position: absolute; /* Permite posicionamento fora do fluxo normal */
+    right: 10px; /* Encosta à direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralização precisa */
+    text-decoration: none;
+}
+
+.table-header .export-btn img {
+    cursor: pointer;
+}
+
+
+
+/* Botão de voltar para a home */
+.home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.home-btn:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+}
+
+/* Estilo para a input de link compartilhado */
+.sharing-link-input {
+    background-color: #6c63ff61;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Estilo da notificação de cópia */
+.copy-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Estilo do link de detalhes */
+.details-link {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 16px;
+}
+
+.details-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o rodapé */
+footer {
+    position: relative;
+    height: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+    margin-top: 20px;
+    padding: 0;
+}
+
