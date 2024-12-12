@@ -108,13 +108,25 @@ $dbName = 'lst_db';
             <li>Start creating and managing your shortened links!</li>
         </ul>
     </li>
-</ol>
-    <h2>🚀 Tech Stack</h2>
+</ol>    
+<li><strong>Python Backoffice:</strong> This backoffice is built using Python to manage the database and interact with the data. It connects to the MySQL database <code>lst_db</code> using the <code>mysql.connector</code> library. The backoffice allows the administrator to:
     <ul>
-        <li><strong>Backend:</strong> PHP (PDO for database interaction).</li>
-        <li><strong>Frontend:</strong> HTML, CSS, JavaScript.</li>
-        <li><strong>Database:</strong> MySQL.</li>
-    </ul>
+        <li><strong>View data:</strong> View data from the <code>links</code> and <code>link_visits</code> tables.</li>
+        <li><strong>Edit data:</strong> Update specific fields in the database based on conditions (e.g., update a URL in the <code>links</code> table).</li>
+        <li><strong>Insert data:</strong> Insert new records into the <code>links</code> table.</li>
+        <li><strong>Delete data:</strong> Delete records from the <code>links</code> table based on a specified condition.</li>
+    </ul>    
+    The backoffice interface includes a simple text-based menu system, implemented in Python, using the <code>colorama</code> library to add color to the terminal output for better readability. Below is the Python script that powers the backoffice.
+    <img src="https://github.com/user-attachments/assets/d55a5db6-f9ab-4e39-a265-e7c3279fbf6b" alt="LinkSnap DB" width="600" />
+</li>
+
+    
+<h2>🚀 Tech Stack</h2>
+<ul>
+    <li><strong>Backend:</strong> PHP (PDO for database interaction), Python (for admin backoffice with <code>admin/app.py</code>).</li>
+    <li><strong>Frontend:</strong> HTML, CSS, JavaScript.</li>
+    <li><strong>Database:</strong> MySQL.</li>
+</ul>
     <h2>📊 Analytics</h2>
     <p>LinkSnap provides detailed analytics for each shortened link, including visitor insights and engagement statistics. Visit the "Link Details" page for each link to access the data.</p>
     <h2>🛠️ Development Notes</h2>
