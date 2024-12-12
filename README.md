@@ -56,13 +56,6 @@
         <li>Create a new database named <code>lst_db</code>.</li>
         <li>Go to the "SQL" tab, and run the following SQL script to create the necessary tables:</li>
         <pre><code>
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- Host: 127.0.0.1
--- Generated on: 12-Dec-2024 at 15:08
--- Server version: 10.4.32-MariaDB
--- PHP version: 8.0.30
-
 CREATE TABLE `links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `original_url` text NOT NULL,
