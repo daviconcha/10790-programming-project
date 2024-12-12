@@ -57,14 +57,15 @@
         <li>Go to the "SQL" tab, and run the following SQL script to create the necessary tables:</li>
         <pre><code>
 CREATE TABLE `links` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `original_url` text NOT NULL,
-  `short_code` varchar(10) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `short_code` (`short_code`)
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`original_url` text NOT NULL,
+`short_code` varchar(10) NOT NULL,
+`created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+PRIMARY KEY (`id`),
+UNIQUE KEY `short_code` (`short_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+        </code></pre>
+        <pre><code>
 CREATE TABLE `link_visits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `link_id` int(11) NOT NULL,
